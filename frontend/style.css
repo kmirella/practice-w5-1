@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+  }
+  a{
+    text-decoration: none;
+  }
+  a img {
+    border: none;
+  }
+  
+  button,
+  a {
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button,
+  textarea,
+  select {
+    appearance: none !important;
+    border-radius: 0;
+  }
+
+  /* END OF CSS RESET */
+
+  #root {
+      display: flex;
+      /*flex-direction: column;*/
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 10px;
+      justify-content: center;
+  }
+
+  #root .card {
+      flex-grow: 1;
+      /*flex-basis: calc(33% - 10px);*/
+      flex-basis: 25%; /*kinyújtja*/
+      height: 100px;
+      border: 1px solid #000000;
+      padding: 15px;
+  }
