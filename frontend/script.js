@@ -105,18 +105,22 @@ function loadEvent(){
     } 
 
     let renderAllCradElements = function (incomingMoviesArray) {
-        let renderedCardList = "";
+        let renderedCardList = `<dic class="cards">`;
         // for ciklus, ami végigmegy a cardsarray-en
         for (const incomingMovie of incomingMoviesArray) {
-            renderedCardList += `
+            renderedCardList += card2(incomingMovie.title, incomingMovie.year, incomingMovie.rate)
+           /*  renderedCardList += `
             // a for ciklus minden lépcsőjénél hozzáadja a renderedCardList-hez az adott elemet a megfelelő div card-ban
             <div class="card">
                 <h2>${incomingMovie.title}</h2>
                 <time>${incomingMovie.year}</time>
                 <span>${incomingMovie.rate}</span>
             </div>
-            `
+            ` */
         }
+        return renderedCardList
+
+        renderedCardList += `</div>`
         console.log(renderedCardList);
         // return-li az elkészült elemekkel feltöltött cardList-et
         return renderedCardList;
